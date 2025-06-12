@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conexão Campo e Cidade</title>
+  <style>
+    :root {
+      --color-campo: #4caf50;
+      --color-cidade: #3f51b5;
+      --color-bg: #f5f7fa;
+      --color-text: #333;
+      --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-primary);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--color-campo), var(--color-cidade));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    main {
+      max-width: 1024px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .card {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 4px solid var(--color-campo);
+      border-radius: 12px 12px 0 0;
+    }
+    .card.cidade img {
+      border-color: var(--color-cidade);
+    }
+    .card-content {
+      padding: 1rem 1.5rem 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-content h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      color: var(--color-text);
+      text-align: center;
+    }
+    .card-content p {
+      flex-grow: 1;
+      font-size: 1rem;
+      text-align: center;
+      color: #555;
+    }
+    .connection {
+      background: linear-gradient(45deg, var(--color-campo) 30%, var(--color-cidade) 70%);
+      border-radius: 16px;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .connection h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1.5px;
+    }
+    .connection p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 4rem;
+    }
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+      .card img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conexão Campo e Cidade</h1>
+    <p>Explorando a relação e harmonia entre o rural e o urbano</p>
+  </header>
+  <main>
+    <section class="cards">
+      <article class="card campo">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Campo verde com pastagem e céu azul" />
+        <div class="card-content">
+          <h2>O Campo</h2>
+          <p>Espaço de tranquilidade, produção agrícola, natureza abundante e vida em conexão com a terra.</p>
+        </div>
+      </article>
+      <article class="card cidade">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Cidade moderna com prédios altos à noite" />
+        <div class="card-content">
+          <h2>A Cidade</h2>
+          <p>Centro dinâmico de cultura, tecnologia, oportunidades e diversidade humana que pulsa constantemente.</p>
+        </div>
+      </article>
+    </section>
+    <section class="connection" aria-label="Conexão entre campo e cidade">
+      <h2>A Conexão</h2>
+      <p>O equilíbrio entre campo e cidade é essencial para um futuro sustentável. Enquanto o campo provê alimentos, ar puro e um ritmo natural, a cidade concentra inovação, serviços e cultura. Juntos, formam uma rede interdependente onde a qualidade de vida pode florescer.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Conexão Campo e Cidade. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
